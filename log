@@ -16,3 +16,17 @@ vi.,  6 de may. de 2022 12:03:52:
  tests:  2|3
 total_score: 15/70
 76269e0
+vi.,  6 de may. de 2022 12:06:18: 
+ heap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function 'createHeap':
+heap.c:63:5: error: statement with no effect [-Werror=unused-value]
+    h->capac;
+    ~^~~~~~~
+heap.c:61:21: error: 'h' is used uninitialized in this function [-Werror=uninitialized]
+    Heap * h=calloc(h->capac,sizeof(Heap));
+                    ~^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4d2273c
