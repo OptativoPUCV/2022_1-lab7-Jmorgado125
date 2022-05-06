@@ -30,3 +30,8 @@ heap.c:61:21: error: 'h' is used uninitialized in this function [-Werror=uniniti
 cc1.exe: all warnings being treated as errors
 Compilation failed
 4d2273c
+vi.,  6 de may. de 2022 12:06:35: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+5db3604

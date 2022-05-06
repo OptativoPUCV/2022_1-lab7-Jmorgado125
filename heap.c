@@ -58,8 +58,8 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-   Heap * h=calloc(h->capac,sizeof(Heap));
+   Heap * h=calloc(3,sizeof(Heap));
    h->size=0;
-   h->capac;
+   h->capac=3;
    return h;
 }
