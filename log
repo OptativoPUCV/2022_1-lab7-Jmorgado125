@@ -40,3 +40,10 @@ vi.,  6 de may. de 2022 12:08:17:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 06b3888
+vi.,  6 de may. de 2022 12:10:36: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+C:\Users\ESTUDI~1\AppData\Local\Temp\cceY86OV.o:test.c:(.text+0x3ba): undefined reference to `createHeap'
+collect2.exe: error: ld returned 1 exit status
+Compilation failed
+15b4154
