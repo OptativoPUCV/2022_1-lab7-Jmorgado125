@@ -47,3 +47,9 @@ C:\Users\ESTUDI~1\AppData\Local\Temp\cceY86OV.o:test.c:(.text+0x3ba): undefined 
 collect2.exe: error: ld returned 1 exit status
 Compilation failed
 15b4154
+vi.,  6 de may. de 2022 12:11:03: 
+ heap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+ tests:  2|3
+total_score: 15/70
+7262a4b
