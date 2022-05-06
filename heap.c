@@ -42,13 +42,14 @@ void heap_push(Heap* pq, void* data, int priority){
   }
   pq->heapArray[a].data=data;
   pq->heapArray[a].priority= priority;
-  pq->size++;
+  
 
   while (pq->heapArray[a].priority > pq->heapArray[(a-1)/2].priority)
   {
      swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
      a=(pq->size-1)/2;
   }
+  pq->size++;
 }
 
 
