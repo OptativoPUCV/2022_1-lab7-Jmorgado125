@@ -121,3 +121,14 @@ do.,  8 de may. de 2022 18:49:19:
  tests:  3|2
 total_score: 25/70
 024c712
+do.,  8 de may. de 2022 18:51:54: 
+ heap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function 'prin':
+heap.c:42:17: error: format '%d' expects argument of type 'int', but argument 2 has type 'heapElem {aka struct nodo}' [-Werror=format=]
+       printf("-%d-",pq->heapArray[i]);
+                 ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+cd30754

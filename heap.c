@@ -36,6 +36,12 @@ void swap(heapElem  a,heapElem  b){
    printf("%d -- %d\n",a.priority,b.priority);
 }
 
+void prin(Heap * pq){
+   int i;
+   for(i=0;i<pq->size;i++){
+      printf("-%d-",pq->heapArray[i]);
+   }
+}
 
 void heap_push(Heap* pq, void* data, int priority){
   if(pq->size == pq->capac){
@@ -54,6 +60,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+   prin(pq);
    swap(pq->heapArray[0],pq->heapArray[pq->size-1]);
    pq->heapArray[pq->size-1].data=NULL;
    pq->heapArray[pq->size-1].priority=0;
