@@ -43,7 +43,9 @@ void prin(Heap * pq){
 }
 
 void heap_push(Heap* pq, void* data, int priority){
-  
+   if (priority<0){
+      return;
+   }
   if(pq->size == pq->capac){
     int NuevaCap=((pq->capac)*2)+1;
     pq->heapArray=realloc(pq->heapArray,NuevaCap);
