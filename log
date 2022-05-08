@@ -80,3 +80,9 @@ do.,  8 de may. de 2022 10:34:16:
  1 file changed, 1 insertion(+), 4 deletions(-)
  tests:  0|0
 b920331
+do.,  8 de may. de 2022 10:35:27: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  3|2
+total_score: 25/70
+d47044e
