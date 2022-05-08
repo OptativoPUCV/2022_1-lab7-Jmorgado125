@@ -66,14 +66,14 @@ void heap_push(Heap* pq, void* data, int priority){
       //printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
       a=(a-1)/2;
   }
-   
+
   pq->size++;
-  
 }
 
 
 void heap_pop(Heap* pq){
-
+   return;
+   
 }
 
 Heap* createHeap(){
