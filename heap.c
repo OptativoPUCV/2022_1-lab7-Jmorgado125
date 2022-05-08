@@ -44,7 +44,7 @@ void prin(Heap * pq){
 
 void heap_push(Heap* pq, void* data, int priority){
   if(pq->size == pq->capac){
-    int NuevaCap=((pq->capac)*2)+1;
+    int NuevaCap=(pq->capac)*2+1;    
     pq->heapArray=realloc(pq->heapArray,NuevaCap);
     pq->capac=NuevaCap;
   }
@@ -71,12 +71,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-   prin(pq);
+   /*/prin(pq);
    swap(pq->heapArray[0],pq->heapArray[pq->size-1]);
    prin(pq);
    pq->heapArray[pq->size].data=NULL;
    pq->heapArray[pq->size].priority=0;
-   pq->size--;
+   pq->size--;*/
 }
 
 Heap* createHeap(){
