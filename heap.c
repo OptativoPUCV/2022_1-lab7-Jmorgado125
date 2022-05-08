@@ -44,7 +44,6 @@ void heap_push(Heap* pq, void* data, int priority){
   }
   pq->heapArray[a].data=data;
   pq->heapArray[a].priority= priority;
-  
 
   while (pq->heapArray[pq->size].priority > pq->heapArray[(pq->size-1)/2].priority)
   {
@@ -60,11 +59,8 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-   /*
    Heap * h=malloc(sizeof(Heap));
-   heapElem h->heapArray=calloc(3,sizeof(heapElem));
    h->size=0;
    h->capac=3;
-   */
-   return NULL;
+   return h;
 }
