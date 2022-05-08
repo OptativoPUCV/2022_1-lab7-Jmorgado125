@@ -33,7 +33,6 @@ void swap(heapElem  a,heapElem  b){
    a.priority=b.priority;
    b.data=aux.data;
    b.priority=aux.priority;
-   printf("%d -- %d\n",a.priority,b.priority);
 }
 
 void prin(Heap * pq){

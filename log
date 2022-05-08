@@ -144,3 +144,9 @@ do.,  8 de may. de 2022 18:53:15:
  tests:  3|2
 total_score: 25/70
 c4af800
+do.,  8 de may. de 2022 18:54:46: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  3|2
+total_score: 25/70
+036b373
