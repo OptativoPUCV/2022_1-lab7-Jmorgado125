@@ -52,10 +52,16 @@ void heap_push(Heap* pq, void* data, int priority){
 
   while (pq->heapArray[a].priority > pq->heapArray[(a-1)/2].priority)
   {
-     printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
-     swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
-     printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
-     a=(a-1)/2;
+      printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
+      heapElem aux;
+      aux.data=pq->heapArray[a].data;
+      aux.priority=pq->heapArray[a].priority;
+      pq->heapArray[a].data=pq->heapArray[(a-1)/2].data;
+      pq->heapArray[a].priority=pq->heapArray[(a-1)/2].priority;
+      pq->heapArray[(a-1)/2].data=aux.data;
+      pq->heapArray[(a-1)/2].priority=aux.priority;
+      printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
+      a=(a-1)/2;
   }
 
   pq->size++;
