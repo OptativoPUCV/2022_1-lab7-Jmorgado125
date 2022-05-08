@@ -26,14 +26,14 @@ void* heap_top(Heap* pq){
 
 void swap(heapElem  a,heapElem  b){
    heapElem aux;
-   printf("%d -- %d",a.priority,b.priority);
+   printf("%d -- %d\n",a.priority,b.priority);
    aux.data=a.data;
    aux.priority=a.priority;
    a.data=b.data;
    a.priority=b.priority;
    b.data=aux.data;
    b.priority=aux.priority;
-   printf("%d -- %d",a.priority,b.priority);
+   printf("%d -- %d\n",a.priority,b.priority);
 }
 
 
