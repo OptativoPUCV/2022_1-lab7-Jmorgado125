@@ -43,8 +43,11 @@ void prin(Heap * pq){
 }
 
 void heap_push(Heap* pq, void* data, int priority){
+  
   if(pq->size == pq->capac){
-    pq->heapArray=realloc(pq->heapArray,(pq->capac*2)+1);
+    int NuevaCap=((pq->capac)*2)+1;
+    pq->heapArray=realloc(pq->heapArray,NuevaCap);
+    pq->capac=NuevaCap;
   }
   pq->heapArray[pq->size].data=data;
   pq->heapArray[pq->size].priority= priority;
@@ -52,7 +55,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
   while (pq->heapArray[a].priority > pq->heapArray[(a-1)/2].priority)
   {
-      printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
+      //printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
       heapElem aux;
       aux.data=pq->heapArray[a].data;
       aux.priority=pq->heapArray[a].priority;
@@ -60,7 +63,7 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[a].priority=pq->heapArray[(a-1)/2].priority;
       pq->heapArray[(a-1)/2].data=aux.data;
       pq->heapArray[(a-1)/2].priority=aux.priority;
-      printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
+      //printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
       a=(a-1)/2;
   }
 
