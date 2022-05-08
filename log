@@ -132,3 +132,9 @@ heap.c:42:17: error: format '%d' expects argument of type 'int', but argument 2 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 cd30754
+do.,  8 de may. de 2022 18:52:06: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  3|2
+total_score: 25/70
+0a418c6
