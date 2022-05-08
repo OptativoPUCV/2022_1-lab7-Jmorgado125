@@ -38,12 +38,11 @@ void swap(heapElem  a,heapElem  b){
 
 
 void heap_push(Heap* pq, void* data, int priority){
-  int a=pq->size;
   if(pq->size == pq->capac){
     pq->heapArray=realloc(pq->heapArray,2*(pq->capac)+1);
   }
-  pq->heapArray[a].data=data;
-  pq->heapArray[a].priority= priority;
+  pq->heapArray[pq->size].data=data;
+  pq->heapArray[pq->size].priority= priority;
 
   while (pq->heapArray[pq->size].priority > pq->heapArray[(pq->size-1)/2].priority)
   {
