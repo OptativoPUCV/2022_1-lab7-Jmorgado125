@@ -43,8 +43,6 @@ void prin(Heap * pq){
 }
 
 void heap_push(Heap* pq, void* data, int priority){
-   printf("\n");
-   prin(pq);
   if(pq->size == pq->capac){
     pq->heapArray=realloc(pq->heapArray,2*(pq->capac)+1);
   }
@@ -54,7 +52,9 @@ void heap_push(Heap* pq, void* data, int priority){
 
   while (pq->heapArray[a].priority > pq->heapArray[(a-1)/2].priority)
   {
+     printf("%d---%d\n",pq->heapArray[a],pq->heapArray[(a-1)/2]);
      swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
+     printf("%d---%d\n",pq->heapArray[a],pq->heapArray[(a-1)/2]);
      a=(a-1)/2;
   }
 
