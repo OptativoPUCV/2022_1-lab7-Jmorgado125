@@ -440,3 +440,17 @@ do.,  8 de may. de 2022 22:25:50:
  1 file changed, 14 insertions(+), 2 deletions(-)
  tests:  6|0
 e5b1d10
+do.,  8 de may. de 2022 22:28:52: 
+ heap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:76:18: error: invalid initializer
+    heapElem  aux=(heapElem *)malloc(sizeof(heapElem));
+                  ^
+heap.c:76:14: error: variable 'aux' set but not used [-Werror=unused-but-set-variable]
+    heapElem  aux=(heapElem *)malloc(sizeof(heapElem));
+              ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c73508d
