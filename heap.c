@@ -95,7 +95,7 @@ void heap_pop(Heap* pq){
          pq->heapArray[a] = pq->heapArray[a*2+2];
          pq->heapArray[a*2+2] = *aux;
 
-         a=a*2+1;
+         a=a*2+2;
          continue;
 
       }
