@@ -73,28 +73,34 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
    prin(pq);
-   heapElem aux;
+   heapElem* aux=(heapElem *)malloc(sizeof(heapElem));
    printf("\n");
    pq->heapArray[0].data=pq->heapArray[pq->size-1].data;
    pq->heapArray[0].priority=pq->heapArray[pq->size-1].priority;
-   
+   pq->size--;
 
    int a=0;
 
-   if(pq->heapArray[a].priority  < pq->heapArray[(2*a+1)].priority){
-      aux=pq->heapArray[a];
-      pq->heapArray[a]=pq->heapArray[(2*a+1)];
-      pq->heapArray[(2*a+1)]=aux;
-      a=(2*a+1);
-   }
-   else if(pq->heapArray[a].priority  < pq->heapArray[(2*a+2)].priority){
-      aux=pq->heapArray[a];
-      pq->heapArray[a]=pq->heapArray[(2*a+2)];
-      pq->heapArray[(2*a+2)]=aux;
-      a=(2*a+2);
-   }
-   
-   pq->size--;
+   while(a < pq->size){
+      if(pq->heapArray[a].priority < pq->heapArray[a*2+1].priority && pq->heapArray[a*2+1].priority > pq->heapArray[a*2+2].priority){
+         *aux=pq->heapArray[a];
+         pq->heapArray[a] = pq->heapArray[a*2+1];
+         pq->heapArray[a*2+1] = *aux;
+
+         a=a*2+1;
+         continue;
+      }
+      if(pq->heapArray[a].priority < pq->heapArray[a*2+2].priority ){
+         *aux=pq->heapArray[a];
+         pq->heapArray[a] = pq->heapArray[a*2+2];
+         pq->heapArray[a*2+2] = *aux;
+
+         a=a*2+1;
+         continue;
+
+      }
+      else break;
+   }   
 }
 
 Heap* createHeap(){
