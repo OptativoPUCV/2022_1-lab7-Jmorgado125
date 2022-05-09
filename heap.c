@@ -78,6 +78,7 @@ void heap_pop(Heap* pq){
    pq->heapArray[0].priority=pq->heapArray[pq->size-1].priority;
    pq->heapArray[pq->size-1].data=NULL;
    pq->heapArray[pq->size-1].priority=0;
+   pq->size--;
 
    int a=0;
 
@@ -92,18 +93,6 @@ void heap_pop(Heap* pq){
          a=(2*a+2);
       }
    }
-   while(pq->heapArray[a].priority  < pq->heapArray[(2*a+2)].priority ){
-      if(pq->heapArray[a].priority  < pq->heapArray[(2*a+1)].priority){
-         swap(pq->heapArray[a],pq->heapArray[(2*a+1)]);
-         a=(2*a+1);
-      }
-      else if(pq->heapArray[a].priority  < pq->heapArray[(2*a+2)].priority){
-         swap(pq->heapArray[a],pq->heapArray[(2*a+2)]);
-         a=(2*a+2);}
-   }
-   pq->size--;
-   prin(pq);
-   printf("\n");
 }
 
 Heap* createHeap(){
