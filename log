@@ -454,3 +454,14 @@ heap.c:76:14: error: variable 'aux' set but not used [-Werror=unused-but-set-var
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c73508d
+do.,  8 de may. de 2022 22:29:10: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:76:14: error: variable 'aux' set but not used [-Werror=unused-but-set-variable]
+    heapElem  aux;
+              ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+415969e
