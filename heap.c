@@ -26,7 +26,6 @@ void* heap_top(Heap* pq){
 
 void swap(heapElem  a,heapElem  b){
    heapElem aux;
-   //printf("%d -- %d\n",a.priority,b.priority);
    aux.data=a.data;
    aux.priority=a.priority;
    a.data=b.data;
@@ -73,10 +72,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+   prin(pq);
    pq->heapArray[0].data=pq->heapArray[pq->size-1].data;
    pq->heapArray[0].priority=pq->heapArray[pq->size-1].priority;
    pq->heapArray[pq->size-1].data=NULL;
    pq->heapArray[pq->size-1].priority=0;
+
    int a=0;
 
    while (pq->heapArray[a].priority  < pq->heapArray[(a-1)/2].priority )
@@ -100,6 +101,7 @@ void heap_pop(Heap* pq){
          a=(a-2)/2;}
    }
    pq->size--;
+   prin(pq);
 }
 
 Heap* createHeap(){
