@@ -435,3 +435,8 @@ do.,  8 de may. de 2022 22:24:53:
  1 file changed, 2 deletions(-)
  tests:  6|0
 0e540c4
+do.,  8 de may. de 2022 22:25:50: 
+ heap.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+ tests:  6|0
+e5b1d10
