@@ -79,16 +79,25 @@ void heap_pop(Heap* pq){
    pq->heapArray[pq->size-1].priority=0;
    int a=0;
 
-   while (pq->heapArray[a].priority  < pq->heapArray[(a-1)/2].priority && pq->heapArray[a].priority  < pq->heapArray[(a-2)/2].priority )
+   while (pq->heapArray[a].priority  < pq->heapArray[(a-1)/2].priority )
    {
       if(pq->heapArray[a].priority  < pq->heapArray[(a-1)/2].priority){
          swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
          a=(a-1)/2;
       }
-      else if(pq->heapArray[a].priority  < pq->heapArray[(a-1)/2].priority){
-         swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
+      else if(pq->heapArray[a].priority  < pq->heapArray[(a-2)/2].priority){
+         swap(pq->heapArray[a],pq->heapArray[(a-2)/2]);
          a=(a-2)/2;
       }
+   }
+   while(pq->heapArray[a].priority  < pq->heapArray[(a-2)/2].priority ){
+      if(pq->heapArray[a].priority  < pq->heapArray[(a-1)/2].priority){
+         swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
+         a=(a-1)/2;
+      }
+      else if(pq->heapArray[a].priority  < pq->heapArray[(a-2)/2].priority){
+         swap(pq->heapArray[a],pq->heapArray[(a-2)/2]);
+         a=(a-2)/2;}
    }
    pq->size--;
 }

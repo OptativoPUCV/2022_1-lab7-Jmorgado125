@@ -380,3 +380,9 @@ do.,  8 de may. de 2022 22:10:58:
  1 file changed, 14 insertions(+)
  tests:  0|0
 df3ed5e
+do.,  8 de may. de 2022 22:15:06: 
+ heap.c | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+ tests:  0|2
+total_score: 35/70
+d0da717
