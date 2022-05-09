@@ -82,7 +82,7 @@ void heap_pop(Heap* pq){
 
    int a=0;
 
-   while (pq->heapArray[a].priority  < pq->heapArray[(2*a+1)].priority )
+   while (pq->heapArray[a].priority  < pq->heapArray[(2*a+2)].priority )
    {
       if(pq->heapArray[a].priority  < pq->heapArray[(2*a+1)].priority){
          swap(pq->heapArray[a],pq->heapArray[(2*a+1)]);
