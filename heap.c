@@ -35,6 +35,14 @@ void swap(heapElem  a,heapElem  b){
    b.priority=aux.priority;
 }
 
+/*heapElem aux;
+      aux.data=pq->heapArray[a].data;
+      aux.priority=pq->heapArray[a].priority;
+      pq->heapArray[a].data=pq->heapArray[(a-1)/2].data;
+      pq->heapArray[a].priority=pq->heapArray[(a-1)/2].priority;
+      pq->heapArray[(a-1)/2].data=aux.data;
+      pq->heapArray[(a-1)/2].priority=aux.priority;*/
+
 void prin(Heap * pq){
    int i;
    for(i=0;i<pq->size;i++){
@@ -55,13 +63,7 @@ void heap_push(Heap* pq, void* data, int priority){
   while (pq->heapArray[a].priority > pq->heapArray[(a-1)/2].priority)
   {
       //printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
-      heapElem aux;
-      aux.data=pq->heapArray[a].data;
-      aux.priority=pq->heapArray[a].priority;
-      pq->heapArray[a].data=pq->heapArray[(a-1)/2].data;
-      pq->heapArray[a].priority=pq->heapArray[(a-1)/2].priority;
-      pq->heapArray[(a-1)/2].data=aux.data;
-      pq->heapArray[(a-1)/2].priority=aux.priority;
+      swap(pq->heapArray[a],pq->heapArray[(a-1)/2]);
       //printf("%d---%d\n",pq->heapArray[a].priority,pq->heapArray[(a-1)/2].priority);
       a=(a-1)/2;
   }
@@ -71,12 +73,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-   /*/prin(pq);
-   swap(pq->heapArray[0],pq->heapArray[pq->size-1]);
-   prin(pq);
-   pq->heapArray[pq->size].data=NULL;
-   pq->heapArray[pq->size].priority=0;
-   pq->size--;*/
+   
 }
 
 Heap* createHeap(){
@@ -85,4 +82,4 @@ Heap* createHeap(){
    h->size=0;
    h->capac=3;
    return h;
-}
+}    ,  
