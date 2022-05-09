@@ -73,6 +73,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
    prin(pq);
+   printf("\n");
    pq->heapArray[0].data=pq->heapArray[pq->size-1].data;
    pq->heapArray[0].priority=pq->heapArray[pq->size-1].priority;
    pq->heapArray[pq->size-1].data=NULL;
@@ -102,6 +103,7 @@ void heap_pop(Heap* pq){
    }
    pq->size--;
    prin(pq);
+   printf("\n");
 }
 
 Heap* createHeap(){
