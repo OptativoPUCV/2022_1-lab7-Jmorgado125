@@ -329,3 +329,9 @@ heap.c:85:6: error: expected identifier or '(' before ',' token
       ^
 Compilation failed
 ec22413
+do.,  8 de may. de 2022 21:52:59: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  3|2
+total_score: 25/70
+a558a3d
